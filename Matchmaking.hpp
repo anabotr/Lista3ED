@@ -12,7 +12,7 @@ class Matchmaking {
 private:
     static const int MAX_PLAYERS = 1;
     Player players[MAX_PLAYERS];
-    int size;
+    int size = 0;
 
 public:
 
