@@ -10,7 +10,7 @@ using namespace std;
 class Matchmaking {
 
 private:
-    static const int MAX_PLAYERS = 1;
+    static const int MAX_PLAYERS = 100000;
     Player players[MAX_PLAYERS];
     int size = 0;
 
@@ -30,6 +30,9 @@ public:
     Player* getWaitingPlayers(int* n);
 
     void printWaitingPlayers();
+
+    Player* merge(Player arr1[], int n, Player arr2[], int m); 
+    Player* mergeSort(Player arr[], int n); 
 
     // Outros métodos auxiliares, se necessário
 };
