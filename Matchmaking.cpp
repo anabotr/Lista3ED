@@ -88,7 +88,10 @@ Player* Matchmaking::mergeSort(Player arr[], int n) {
 }
 
 void Matchmaking::sortByScoreMerge(){
-    mergeSort(this->players, this->size);  
+    Player* sorted = mergeSort(this->players, this->size);  
+    for (int i = 0; i< this->size; i++){
+        this->players[i] = sorted[i];
+    }
 }
 
 Player* Matchmaking::formGroup(int groupSize, int delta, int* n){
@@ -110,6 +113,7 @@ Player* Matchmaking::formGroup(int groupSize, int delta, int* n){
                 removePlayer(chosen[l].getId());
             }
             
+            this->size = this->size - groupSize;
             return chosen;
         }
     }
@@ -131,7 +135,7 @@ Player* Matchmaking::getWaitingPlayers(int* n){
 }
 
 void Matchmaking::printWaitingPlayers(){
-    cout << "Wainting players: " << endl; 
+    cout << "Waiting players: " << endl; 
 
     if (this->size == 0){
         cout << "(empty)" << endl; 

@@ -10,7 +10,7 @@ using namespace std;
 class Matchmaking {
 
 private:
-    static const int MAX_PLAYERS = 100000;
+    static const int MAX_PLAYERS = 10000;
     Player players[MAX_PLAYERS];
     int size = 0;
 
