@@ -113,7 +113,6 @@ Player* Matchmaking::formGroup(int groupSize, int delta, int* n){
                 removePlayer(chosen[l].getId());
             }
             
-            this->size = this->size - groupSize;
             return chosen;
         }
     }

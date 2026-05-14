@@ -9,8 +9,8 @@ using namespace std;
 class Matchmaking {
 
 private:
-    static const int MAX_PLAYERS = 10000;
-    Player players[MAX_PLAYERS];
+    static const int MAX_PLAYERS = 100000;
+    Player* players = new Player[MAX_PLAYERS];
     int size = 0;
 
 public:
@@ -23,7 +23,7 @@ public:
 
     void sortByScoreInsertion();
     void sortByScoreMerge();
-
+    
     Player* formGroup(int groupSize, int delta, int* n);
 
     Player* getWaitingPlayers(int* n);

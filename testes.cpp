@@ -7,10 +7,10 @@
 using namespace std;
 using namespace std::chrono;
 
-const int NUM_TAMS = 10;
-const int NUM_EXECS = 150;
+const int NUM_TAMS = 13;
+const int NUM_EXECS = 100;
 
-int sizes[NUM_TAMS] = {10, 100, 1000, 2000, 5000, 10000, 15000, 20000};
+int sizes[NUM_TAMS] = {10, 100, 1000, 2000, 5000,10000,15000,20000,30000,40000,50000, 80000, 100000};
 
 void generatePlayers(Player* players, int n) {
     static std::mt19937 rng(42); 
