@@ -26,6 +26,7 @@ bool Matchmaking::removePlayer(int id){
                 this->players[curr] = this->players[j];
                 curr++; 
             }
+            this->size--; 
             return true; 
         }
     }
@@ -108,7 +109,6 @@ Player* Matchmaking::formGroup(int groupSize, int delta, int* n){
                 chosen[k] = this->players[k+i];
             }
             *n = groupSize;
-
             for (int l = 0; l<groupSize; l++){
                 removePlayer(chosen[l].getId());
             }
