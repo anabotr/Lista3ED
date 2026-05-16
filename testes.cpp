@@ -100,7 +100,7 @@ int main() {
             total_merge += duration_cast<microseconds>(fim_merge - inicio_merge).count();
         }
 
-        //escreve os resultados (no terminal ou em um arquivo)
+        //escreve os resultados (no terminal ou em um)
         cout << N << ","
              << (total_insertion / NUM_EXECS) << ","
              << (total_merge / NUM_EXECS) << endl;
